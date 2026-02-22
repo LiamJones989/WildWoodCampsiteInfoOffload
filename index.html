@@ -6,53 +6,82 @@
 <title>Welcome to Phesant 8!</title>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background-color: #f4f8f4;
-        color: #333;
-    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f8f4;
+    color: #333;
+}
 
-    header {
-        background: #2e6b3f;
-        color: white;
-        padding: 30px;
-        text-align: center;
-    }
+header {
+    background: #2e6b3f;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
 
-    nav {
-        background: #1f4d2b;
-        padding: 10px;
-        text-align: center;
-    }
+nav {
+    background: #1f4d2b;
+    padding: 10px;
+    text-align: center;
+}
 
-    nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-    }
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    section {
-        padding: 30px;
-        max-width: 1000px;
-        margin: auto;
-        background: white;
-        margin-top: 20px;
-        border-radius: 10px;
-    }
+section {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 12px;
+}
 
-    h2 {
-        color: #2e6b3f;
-    }
+h2 {
+    color: #2e6b3f;
+}
 
-    footer {
-        background: #1f4d2b;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-top: 30px;
-    }
+/* MAP GRID */
+
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.map-card {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.map-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.map-card img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: #1f4d2b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
 </style>
 </head>
 
@@ -64,92 +93,114 @@
 </header>
 
 <nav>
-    <a href="#about">About</a>
     <a href="#amenities">Amenities</a>
     <a href="#rules">Rules</a>
     <a href="#maps">Maps</a>
     <a href="#location">Location</a>
 </nav>
 
-<section id="about">
-    <h2>About Our Campground</h2>
-    <p>
-        Phesant 8 is a private recreational campground designed for families,
-        RV owners, and outdoor lovers looking for a relaxing nature experience.
-        The community features wooded acreage, private lakes, and year-round
-        camping opportunities.
-    </p>
-</section>
-
 <section id="amenities">
-    <h2>Amenities</h2>
-    <ul>
-        <li>1200 wooded acres</li>
-        <li>Over 700 acres of common ground</li>
-        <li>10 private lakes for fishing and boating (10hp motor max)</li>
-        <li>Olympic-size swimming pool (Memorial Day–Labor Day)</li>
-        <li>Comfort stations with showers</li>
-        <li>Clubhouse and concession stand</li>
-        <li>Baseball/softball field</li>
-        <li>Basketball, tennis, and pickleball courts</li>
-        <li>Sand volleyball court</li>
-        <li>ATV riding trails (400 acres)</li>
-        <li>Hiking and nature trails</li>
-        <li>Playgrounds and horseshoe pits</li>
-        <li>Outdoor chapel and memorial garden</li>
-        <li>Security and maintenance staff</li>
-    </ul>
+<h2>Amenities</h2>
+<ul>
+<li>1200 wooded acres</li>
+<li>Over 700 acres of common ground</li>
+<li>10 private lakes for fishing and boating (10hp max)</li>
+<li>Olympic-size swimming pool (Memorial Day–Labor Day)</li>
+<li>Comfort stations with showers</li>
+<li>Clubhouse and concession stand</li>
+<li>Basketball, tennis, and pickleball courts</li>
+<li>Sand volleyball court</li>
+<li>ATV riding trails</li>
+<li>Hiking and nature trails</li>
+<li>Playgrounds and horseshoe pits</li>
+<li>Outdoor chapel and memorial garden</li>
+</ul>
 </section>
 
 <section id="rules">
-    <h2>Campground Rules</h2>
-    <ul>
-        <li>Quiet hours: Weekdays 10:00 PM – 8:00 AM; Weekends 11:00 PM – 9:00 AM</li>
-        <li>Fires allowed only in provided fire rings</li>
-        <li>No large bonfires</li>
-        <li>Do not leave fires unattended</li>
-        <li>All fires must be fully extinguished before leaving</li>
-        <li>Fireworks (including sparklers) are prohibited</li>
-        <li>One camping unit per campsite</li>
-        <li>Keep all vehicles and activities within your assigned site</li>
-        <li>Store trash securely away from wildlife</li>
-        <li>Replace moved picnic tables</li>
-    </ul>
+<h2>Campground Rules</h2>
+<ul>
+<li>Quiet hours: Weekdays 10 PM – 8 AM; Weekends 11 PM – 9 AM</li>
+<li>Fires only in fire rings</li>
+<li>No unattended fires</li>
+<li>Fully extinguish fires before leaving</li>
+<li>No fireworks allowed</li>
+<li>One camping unit per site</li>
+<li>Keep vehicles within your site</li>
+<li>Secure trash from wildlife</li>
+<li>Return moved picnic tables</li>
+</ul>
 </section>
 
 <section id="maps">
-    <h2>Campground Maps</h2>
-    <p>
-        Available park maps include:
-    </p>
-    <ul>
-        <li>Wildwood Main Map</li>
-        <li>Beaver Park – Plat 1 & 2</li>
-        <li>Canyon View</li>
-        <li>Crows Park (both plats)</li>
-        <li>Deer Park</li>
-        <li>Pheasant Park</li>
-        <li>Robin Park</li>
-        <li>Turkey Park</li>
-    </ul>
-    <p><em>Add your actual map images here later.</em></p>
+<h2>Campground Maps</h2>
+<p>Images are loaded from the main branch root.</p>
+
+<div class="map-grid">
+
+<div class="map-card">
+<img src="Wildwood-Main.png" alt="Wildwood Main Map">
+<h3>Wildwood Main Map</h3>
+</div>
+
+<div class="map-card">
+<img src="Beaver-Park-Plat-1.png" alt="Beaver Park Plat 1">
+<h3>Beaver Park – Plat 1</h3>
+</div>
+
+<div class="map-card">
+<img src="Beaver-Park-Plat-2.png" alt="Beaver Park Plat 2">
+<h3>Beaver Park – Plat 2</h3>
+</div>
+
+<div class="map-card">
+<img src="Canyon-View.png" alt="Canyon View">
+<h3>Canyon View</h3>
+</div>
+
+<div class="map-card">
+<img src="Crows-Park.png" alt="Crows Park">
+<h3>Crows Park</h3>
+</div>
+
+<div class="map-card">
+<img src="Crows-Park-Plat-2.png" alt="Crows Park Plat 2">
+<h3>Crows Park – Plat 2</h3>
+</div>
+
+<div class="map-card">
+<img src="Deer-Park.png" alt="Deer Park">
+<h3>Deer Park</h3>
+</div>
+
+<div class="map-card">
+<img src="Pheasant-Park.png" alt="Pheasant Park">
+<h3>Pheasant Park</h3>
+</div>
+
+<div class="map-card">
+<img src="Robin-Park.png" alt="Robin Park">
+<h3>Robin Park</h3>
+</div>
+
+<div class="map-card">
+<img src="Turkey-Park.png" alt="Turkey Park">
+<h3>Turkey Park</h3>
+</div>
+
+</div>
 </section>
 
 <section id="location">
-    <h2>Location & Directions</h2>
-    <p><strong>Address:</strong><br>
-    7233 Wildwood Estates Dr.<br>
-    Steedman, MO 65077</p>
-
-    <p><strong>From the East:</strong><br>
-    Take I-70 to Williamsburg Exit 161 → Hwy D → Hwy O → Wildwood Entrance.</p>
-
-    <p><strong>From the West:</strong><br>
-    Exit US-54 (Exit 148) → US-54 Business Route at Fulton → Hwy O → Wildwood Entrance.</p>
+<h2>Location</h2>
+<p>
+7233 Wildwood Estates Dr.<br>
+Steedman, MO 65077
+</p>
 </section>
 
 <footer>
-    <p>© 2026 Phesant 8 Campground</p>
+<p>© 2026 Phesant 8 Campground</p>
 </footer>
 
 </body>
