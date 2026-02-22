@@ -1,123 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Phesant 8!</title>
+
 <style>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 24px;
-  padding: 20px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f8f4;
+    color: #333;
 }
 
-.card {
-  background: #f5f5f5;
-  border-radius: 14px;
-  padding: 14px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+header {
+    background: #2e6b3f;
+    color: white;
+    padding: 30px;
+    text-align: center;
 }
 
-.map-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 10px;
-  cursor: zoom-in;
-  transition: transform .2s ease;
+nav {
+    background: #1f4d2b;
+    padding: 10px;
+    text-align: center;
 }
 
-.map-img:hover {
-  transform: scale(1.04);
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* MODAL */
-#imgModal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-  background: rgba(0,0,0,0.92);
-  align-items: center;
-  justify-content: center;
+section {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 12px;
 }
 
-#imgModal img {
-  max-width: 95%;
-  max-height: 92%;
-  border-radius: 12px;
+h2 {
+    color: #2e6b3f;
 }
 
-#imgModal .close {
-  position: absolute;
-  top: 18px;
-  right: 30px;
-  color: white;
-  font-size: 42px;
-  cursor: pointer;
-  font-weight: bold;
+/* MAP GRID */
+
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.map-card {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.map-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.map-card img:hover {
+    transform: scale(1.05);
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox img {
+    margin: auto;
+    display: block;
+    max-width: 95%;
+    max-height: 90%;
+    border-radius: 12px;
+}
+
+footer {
+    background: #1f4d2b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
 }
 </style>
+</head>
 
-<div class="grid">
+<body>
 
-  <div class="card">
-    <img src="images/wildwood.jpg" class="map-img" onclick="openModal(this)">
-    <div>Wildwood Main Map</div>
-  </div>
+<header>
+    <h1>Welcome to Phesant 8!</h1>
+    <p>Your peaceful campground getaway</p>
+</header>
 
-  <div class="card">
-    <img src="images/beaver1.jpg" class="map-img" onclick="openModal(this)">
-    <div>Beaver Park – Plat 1</div>
-  </div>
+<nav>
+    <a href="#amenities">Amenities</a>
+    <a href="#rules">Rules</a>
+    <a href="#maps">Maps</a>
+    <a href="#location">Location</a>
+</nav>
 
-  <div class="card">
-    <img src="images/beaver2.jpg" class="map-img" onclick="openModal(this)">
-    <div>Beaver Park – Plat 2</div>
-  </div>
+<section id="amenities">
+<h2>Amenities</h2>
+<ul>
+<li>1200 wooded acres</li>
+<li>Over 700 acres of common ground</li>
+<li>10 private lakes for fishing and boating (10hp max)</li>
+<li>Olympic-size swimming pool (Memorial Day–Labor Day)</li>
+<li>Comfort stations with showers</li>
+<li>Clubhouse and concession stand</li>
+<li>Basketball, tennis, and pickleball courts</li>
+<li>Sand volleyball court</li>
+<li>ATV riding trails</li>
+<li>Hiking and nature trails</li>
+<li>Playgrounds and horseshoe pits</li>
+<li>Outdoor chapel and memorial garden</li>
+</ul>
+</section>
 
-  <div class="card">
-    <img src="images/canyon.jpg" class="map-img" onclick="openModal(this)">
-    <div>Canyon View</div>
-  </div>
+<section id="rules">
+<h2>Campground Rules</h2>
+<ul>
+<li>Quiet hours: Weekdays 10 PM – 8 AM; Weekends 11 PM – 9 AM</li>
+<li>Fires only in fire rings</li>
+<li>No unattended fires</li>
+<li>Fully extinguish fires before leaving</li>
+<li>No fireworks allowed</li>
+<li>One camping unit per site</li>
+<li>Keep vehicles within your site</li>
+<li>Secure trash from wildlife</li>
+<li>Return moved picnic tables</li>
+</ul>
+</section>
 
-  <div class="card">
-    <img src="images/crows.jpg" class="map-img" onclick="openModal(this)">
-    <div>Crows Park</div>
-  </div>
+<section id="maps">
+<h2>Campground Maps</h2>
+<p>Click any map to view full size.</p>
 
-  <div class="card">
-    <img src="images/pheasant.jpg" class="map-img" onclick="openModal(this)">
-    <div>Pheasant Park</div>
-  </div>
+<div class="map-grid">
 
-  <div class="card">
-    <img src="images/robin.jpg" class="map-img" onclick="openModal(this)">
-    <div>Robin Park</div>
-  </div>
-
-  <div class="card">
-    <img src="images/turkey.jpg" class="map-img" onclick="openModal(this)">
-    <div>Turkey Park</div>
-  </div>
-
+<div class="map-card">
+<img src="Wildwood-Main.png" onclick="openLightbox(this.src)">
+<h3>Wildwood Main Map</h3>
 </div>
 
-<!-- MODAL -->
-<div id="imgModal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img id="modalImg">
+<div class="map-card">
+<img src="Beaver-Park---Plat-1.png" onclick="openLightbox(this.src)">
+<h3>Beaver Park – Plat 1</h3>
+</div>
+
+<div class="map-card">
+<img src="Beaver-Park---Plat-2.png" onclick="openLightbox(this.src)">
+<h3>Beaver Park – Plat 2</h3>
+</div>
+
+<div class="map-card">
+<img src="Canyon-View.png" onclick="openLightbox(this.src)">
+<h3>Canyon View</h3>
+</div>
+
+<div class="map-card">
+<img src="Crows-Park.png" onclick="openLightbox(this.src)">
+<h3>Crows Park</h3>
+</div>
+
+<div class="map-card">
+<img src="Crows-Park---Plat-2.png" onclick="openLightbox(this.src)">
+<h3>Crows Park – Plat 2</h3>
+</div>
+
+<div class="map-card">
+<img src="Pheasant-Park.png" onclick="openLightbox(this.src)">
+<h3>Pheasant Park</h3>
+</div>
+
+<div class="map-card">
+<img src="Robin-Park.png" onclick="openLightbox(this.src)">
+<h3>Robin Park</h3>
+</div>
+
+<div class="map-card">
+<img src="Turkey-Park.png" onclick="openLightbox(this.src)">
+<h3>Turkey Park</h3>
+</div>
+
+</div>
+</section>
+
+<section id="location">
+<h2>Location</h2>
+<p>
+7233 Wildwood Estates Dr.<br>
+Steedman, MO 65077
+</p>
+</section>
+
+<footer>
+<p>© 2026 Phesant 8 Campground</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full Map">
 </div>
 
 <script>
-function openModal(img) {
-  const modal = document.getElementById("imgModal");
-  const modalImg = document.getElementById("modalImg");
-  modal.style.display = "flex";
-  modalImg.src = img.src;
+function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "block";
 }
 
-function closeModal() {
-  document.getElementById("imgModal").style.display = "none";
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
 }
-
-document.getElementById("imgModal").addEventListener("click", function(e) {
-  if (e.target === this) closeModal();
-});
 </script>
+
+</body>
+</html>
