@@ -75,6 +75,28 @@ h2 {
     transform: scale(1.05);
 }
 
+/* LIGHTBOX */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox img {
+    margin: auto;
+    display: block;
+    max-width: 95%;
+    max-height: 90%;
+    border-radius: 12px;
+}
+
 footer {
     background: #1f4d2b;
     color: white;
@@ -139,47 +161,47 @@ footer {
 <div class="map-grid">
 
 <div class="map-card">
-<img src="Wildwood-Main.png" alt="Wildwood Main Map">
+<img src="Wildwood-Main.png" onclick="openLightbox(this.src)">
 <h3>Wildwood Main Map</h3>
 </div>
 
 <div class="map-card">
-<img src="Beaver-Park---Plat-1.png" alt="Beaver Park Plat 1">
+<img src="Beaver-Park---Plat-1.png" onclick="openLightbox(this.src)">
 <h3>Beaver Park – Plat 1</h3>
 </div>
 
 <div class="map-card">
-<img src="Beaver-Park---Plat-2.png" alt="Beaver Park Plat 2">
+<img src="Beaver-Park---Plat-2.png" onclick="openLightbox(this.src)">
 <h3>Beaver Park – Plat 2</h3>
 </div>
 
 <div class="map-card">
-<img src="Canyon-View.png" alt="Canyon View">
+<img src="Canyon-View.png" onclick="openLightbox(this.src)">
 <h3>Canyon View</h3>
 </div>
 
 <div class="map-card">
-<img src="Crows-Park.png" alt="Crows Park">
+<img src="Crows-Park.png" onclick="openLightbox(this.src)">
 <h3>Crows Park</h3>
 </div>
 
 <div class="map-card">
-<img src="Crows-Park---Plat-2.png" alt="Crows Park Plat 2">
+<img src="Crows-Park---Plat-2.png" onclick="openLightbox(this.src)">
 <h3>Crows Park – Plat 2</h3>
 </div>
 
 <div class="map-card">
-<img src="Pheasant-Park.png" alt="Pheasant Park">
+<img src="Pheasant-Park.png" onclick="openLightbox(this.src)">
 <h3>Pheasant Park</h3>
 </div>
 
 <div class="map-card">
-<img src="Robin-Park.png" alt="Robin Park">
+<img src="Robin-Park.png" onclick="openLightbox(this.src)">
 <h3>Robin Park</h3>
 </div>
 
 <div class="map-card">
-<img src="Turkey-Park.png" alt="Turkey Park">
+<img src="Turkey-Park.png" onclick="openLightbox(this.src)">
 <h3>Turkey Park</h3>
 </div>
 
@@ -197,6 +219,22 @@ Steedman, MO 65077
 <footer>
 <p>© 2026 Phesant 8 Campground</p>
 </footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full Map">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").style.display = "block";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 </body>
 </html>
