@@ -5,10 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welcome to Phesant 8!</title>
 
-<!-- ✅ PWA META -->
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#2e6b3f">
-
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -107,7 +103,7 @@ footer {
     margin-top: 30px;
 }
 
-/* FISHING DROPDOWNS */
+/* ✅ FISHING DROPDOWNS */
 .lake-dropdown {
     margin: 10px 0;
     border-radius: 10px;
@@ -179,20 +175,22 @@ footer {
 </ul>
 </section>
 
-<!-- FISHING -->
+<!-- ✅ FISHING SECTION -->
 <section id="fishing">
 <h2>Fishing Information</h2>
 
-<details class="lake-dropdown"><summary>1. Beaver Lake (Beaver Park)</summary><div>Add details</div></details>
-<details class="lake-dropdown"><summary>2. Canyon View Lake (Canyon View Park)</summary><div>Add details</div></details>
-<details class="lake-dropdown"><summary>3. Crow Lake (Crows Park)</summary><div>Add details</div></details>
-<details class="lake-dropdown"><summary>4. Deer Lake (Deer Park)</summary><div>Add details</div></details>
-<details class="lake-dropdown"><summary>5. Pheasant Lake (Pheasant Park)</summary><div>Add details</div></details>
-<details class="lake-dropdown"><summary>6. Robin Lake (Robin Park)</summary><div>Add details</div></details>
-<details class="lake-dropdown"><summary>7. Turkey Lake (Turkey Park)</summary><div>Add details</div></details>
-<details class="lake-dropdown"><summary>8. Mallard Lake (Mallard Park)</summary><div>Add details</div></details>
-<details class="lake-dropdown"><summary>9. Woodland Lake (Woodland Park)</summary><div>Add details</div></details>
-<details class="lake-dropdown"><summary>10. Lost Canyon Lake (Lost Canyon Park)</summary><div>Add details</div></details>
+<h3>Lake Information</h3>
+
+<details class="lake-dropdown"><summary>1. Beaver Lake (Beaver Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>2. Canyon View Lake (Canyon View Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>3. Crow Lake (Crows Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>4. Deer Lake (Deer Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>5. Pheasant Lake (Pheasant Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>6. Robin Lake (Robin Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>7. Turkey Lake (Turkey Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>8. Mallard Lake (Mallard Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>9. Woodland Lake (Woodland Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>10. Lost Canyon Lake (Lost Canyon Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
 
 <h3>General Fish & Wildlife</h3>
 <ul>
@@ -200,15 +198,54 @@ footer {
 <li>Bluegill</li>
 <li>Catfish</li>
 <li>Crappie</li>
-<li>Native wildlife around lakes</li>
+<li>Various native wildlife around lakes</li>
 </ul>
+
+<!-- EASY EXPANSION -->
+<div id="fishing-extra">
+<!-- Add seasonal fishing reports here -->
+</div>
+
+</section>
+
+<section id="maps">
+<h2>Campground Maps</h2>
+<p>Click any map to view full size.</p>
+
+<div class="map-grid">
+
+<div class="map-card">
+<img src="Wildwood-Main.png" alt="Wildwood Main Map" onclick="openLightbox(this.src)">
+<h3>Wildwood Main Map</h3>
+</div>
+
+<div class="map-card">
+<img src="Wildwood-Secondary.png" alt="Wildwood Secondary Map" onclick="openLightbox(this.src)">
+<h3>Wildwood Secondary Map</h3>
+</div>
+
+</div>
+</section>
+
+<section id="location">
+<h2>Location</h2>
+<p>
+7233 Wildwood Estates Dr.<br>
+Steedman, MO 65077
+</p>
+</section>
+
+<section id="info">
+<h2>Useful Info for Visitors</h2>
+
+<h3>Website Hours</h3>
+<p>Our online website will be actively updated Monday–Friday, 8:00 AM – 6:00 PM.</p>
 </section>
 
 <footer>
 <p>© 2026 Phesant 8 Campground</p>
 </footer>
 
-<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" src="" alt="Full Map">
 </div>
@@ -220,11 +257,6 @@ function openLightbox(src) {
 }
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
-}
-
-/* ✅ SERVICE WORKER REGISTER */
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
 }
 </script>
 
