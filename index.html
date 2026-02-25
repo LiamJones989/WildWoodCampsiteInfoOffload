@@ -102,6 +102,27 @@ footer {
     padding: 15px;
     margin-top: 30px;
 }
+
+/* ✅ FISHING DROPDOWNS */
+.lake-dropdown {
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.lake-dropdown summary {
+    background: #2e6b3f;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.lake-dropdown div {
+    padding: 15px;
+    background: #fafafa;
+}
 </style>
 </head>
 
@@ -154,38 +175,37 @@ footer {
 </ul>
 </section>
 
-<!-- ✅ NEW FISHING SECTION -->
+<!-- ✅ FISHING SECTION -->
 <section id="fishing">
 <h2>Fishing Information</h2>
 
-<h3>Lake Access</h3>
+<h3>Lake Information</h3>
+
+<details class="lake-dropdown"><summary>1. Beaver Lake (Beaver Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>2. Canyon View Lake (Canyon View Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>3. Crow Lake (Crows Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>4. Deer Lake (Deer Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>5. Pheasant Lake (Pheasant Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>6. Robin Lake (Robin Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>7. Turkey Lake (Turkey Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>8. Mallard Lake (Mallard Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>9. Woodland Lake (Woodland Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+<details class="lake-dropdown"><summary>10. Lost Canyon Lake (Lost Canyon Park)</summary><div>ADD LAKE DETAILS HERE</div></details>
+
+<h3>General Fish & Wildlife</h3>
 <ul>
-<li>10 private lakes available for fishing</li>
-<li>Missouri fishing regulations apply</li>
-<li>Catch and release encouraged for bass</li>
-<li>10hp motor limit on all lakes</li>
-<li>Please respect posted lake rules</li>
+<li>Bass</li>
+<li>Bluegill</li>
+<li>Catfish</li>
+<li>Crappie</li>
+<li>Various native wildlife around lakes</li>
 </ul>
 
-<h3>Best Fishing Tips</h3>
-<ul>
-<li>Early morning and evening are most productive</li>
-<li>Try soft plastics and spinnerbaits for bass</li>
-<li>Use worms or minnows for panfish</li>
-<li>Fish near fallen trees and shaded banks</li>
-</ul>
-
-<h3>Fishing Courtesy</h3>
-<ul>
-<li>Clean up all fishing line and trash</li>
-<li>Respect other anglers' space</li>
-<li>Follow campground quiet hours</li>
-</ul>
-
-<!-- Easy expansion area -->
+<!-- EASY EXPANSION -->
 <div id="fishing-extra">
-<!-- Add fishing reports or lake updates here -->
+<!-- Add seasonal fishing reports here -->
 </div>
+
 </section>
 
 <section id="maps">
@@ -212,7 +232,7 @@ Steedman, MO 65077
 <h2>Useful Info for Visitors</h2>
 
 <h3>Website Hours</h3>
-<p>Our online website will be actively updated Monday–Friday, 8:00 AM – 6:00 PM. Any offline updates will appear automatically on reload.</p>
+<p>Our online website will be actively updated Monday–Friday, 8:00 AM – 6:00 PM.</p>
 </section>
 
 <footer>
@@ -228,7 +248,6 @@ function openLightbox(src) {
     document.getElementById("lightbox-img").src = src;
     document.getElementById("lightbox").style.display = "block";
 }
-
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
